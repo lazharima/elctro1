@@ -242,7 +242,6 @@ app.post('/api/applications/:id/status', async (req, res) => {
                     }
                 }
             }
-        }
 
         res.status(200).json({ success: true });
     } catch (err) {
