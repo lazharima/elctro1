@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro | متجر السيرفر</title>
+    <link rel="icon" href="Electro.png" type="image/png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="nav-brand"><img src="Electro.png" alt="Electro" style="height: 45px; border-radius: 8px;"></a>
+            
+            <ul class="nav-menu" style="display: flex; gap: 30px; align-items: center;">
+                <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li><a href="index.html#streamers" class="nav-link">صناع المحتوى</a></li>
+                <li><a href="rules.html" class="nav-link">القوانين</a></li>
+                <li><a href="whitelist.html" class="nav-link">تقديم الوظائف</a></li>
+                <li><a href="store.html" class="nav-link active">المتجر</a></li>
+            </ul>
+
+            <div class="user-area" id="user-area">
+                <a href="login.html" class="btn btn-outline" id="nav-login-btn"><i class="fab fa-discord"></i> تسجيل دخول</a>
+            </div>
+
+            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="page-header pb-0">
+        <div class="container">
+            <h1 class="hero-title reveal" style="font-size: 3.5rem;">متجر إلكترو المتميز</h1>
+            <p class="hero-desc reveal">ادعم السيرفر واستمتع بمميزات حصرية لك من سيارات وباقات ورتب في آي بي المخصصة.</p>
+            <div class="reveal" style="margin-top: 30px;">
+                <a href="https://eo-store.tebex.io/" target="_blank" class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 40px;"><i class="fas fa-shopping-cart"></i> الدخول لمتجر Tebex الرسمي</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Section -->
+    <section class="section pt-50">
+        <div class="container">
+            <div class="store-grid">
+                
+                <!-- Package 1 -->
+                <div class="card package-card reveal">
+                    <i class="fas fa-crown" style="font-size: 50px; color: #ffd700;"></i>
+                    <h3 class="card-title" style="margin-top: 20px;">باقة الـ VIP الذهبية</h3>
+                    <div class="package-price">$25</div>
+                    <ul class="package-features">
+                        <li>أولوية دخول للسيرفر (Priority)</li>
+                        <li>راتب شهري إضافي باللعبة</li>
+                        <li>موقف سيارات مميز</li>
+                        <li>رتبة ورول مميز في الديسكورد</li>
+                    </ul>
+                    <a href="https://eo-store.tebex.io/" target="_blank" class="btn btn-outline" style="width: 100%;">شراء الآن</a>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="card package-card reveal" style="border-color: var(--primary); box-shadow: 0 0 15px rgba(57, 182, 255, 0.2);">
+                    <i class="fas fa-car-side" style="font-size: 50px; color: var(--primary);"></i>
+                    <h3 class="card-title" style="margin-top: 20px;">السيارات الحصرية 1/1</h3>
+                    <div class="package-price">$45</div>
+                    <ul class="package-features">
+                        <li>سيارة بتصميم وتعديل حصري لا يمتلكه غيرك</li>
+                        <li>لوحات سيارات مميزة (مخصصة)</li>
+                        <li>تأمين سيارة مجاني مدى الحياة</li>
+                        <li>كراج إضافي للسيارات</li>
+                    </ul>
+                    <a href="https://eo-store.tebex.io/" target="_blank" class="btn btn-primary" style="width: 100%;">شراء الآن</a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="card package-card reveal">
+                    <i class="fas fa-money-bill-wave" style="font-size: 50px; color: #2ed573;"></i>
+                    <h3 class="card-title" style="margin-top: 20px;">حزمة البداية (أموال)</h3>
+                    <div class="package-price">$10</div>
+                    <ul class="package-features">
+                        <li>ضخ مبلغ مالي بحسابك البنكي الافتراضي للبدء</li>
+                        <li>شقة اقتصادية مجانية</li>
+                        <li>رخصة قيادة جاهزة</li>
+                        <li>معدات تصليح صغيرة (عدد 5)</li>
+                    </ul>
+                    <a href="https://eo-store.tebex.io/" target="_blank" class="btn btn-outline" style="width: 100%;">شراء الآن</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="align-items: flex-start;">
+                
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">من نحن</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">إلكترو هو سيرفر فايف إم مخصص للاعبين العرب، تأسس بهدف تقديم تجربة لعب استثنائية.</p>
+                </div>
+                
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">القوانين</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">القوانين تهدف إلى ضمان المتعة والاحترام بين اللاعبين، مع تنظيم سير اللعبة بطريقة عادلة وشفافة.</p>
+                    <a href="rules.html" style="color: #fff; font-size: 0.9rem; text-decoration: underline;">الاطلاع على القوانين</a>
+                </div>
+
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">اتصل بنا</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">يمكنك التواصل معنا عن طريق جميع منصات التواصل الاجتماعي سواء الدسكورد او التويتر</p>
+                    <a href="https://discord.gg/NYe2D6g4wP" style="color: #fff; font-size: 0.9rem; text-decoration: underline;">الدخول إلى الديسكورد</a>
+                </div>
+
+            </div>
+            <div class="copyright">
+                حقوق الطبع والنشر &copy; 2026 Electro Server. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

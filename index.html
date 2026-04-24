@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro | أقوى سيرفر حياة واقعية</title>
+    <link rel="icon" href="Electro.png" type="image/png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="nav-brand"><img src="Electro.png" alt="Electro" style="height: 45px; border-radius: 8px;"></a>
+            
+            <ul class="nav-menu" style="display: flex; gap: 30px; align-items: center;">
+                <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#streamers" class="nav-link">صناع المحتوى</a></li>
+                <li><a href="rules.html" class="nav-link">القوانين</a></li>
+                <li><a href="whitelist.html" class="nav-link">تقديم الوظائف</a></li>
+                <li><a href="store.html" class="nav-link">المتجر</a></li>
+            </ul>
+
+            <div class="user-area" id="user-area">
+                <a href="login.html" class="btn btn-outline" id="nav-login-btn"><i class="fab fa-discord"></i> تسجيل دخول</a>
+            </div>
+            
+            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero bg-dark">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title reveal">Electro | إلكترو</h1>
+                <p class="hero-desc reveal">حياكم الله في سيرفر إلكترو المتخصص في الرول بلاي نحاول جاهدين تقديم افضل تجربه للرول بلاي في الشرق الاوسط انضم الينا الان و عيش حياتك كما تريد</p>
+                <div class="hero-buttons reveal">
+                    <a href="login.html" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">مميزات السيرفر</h2>
+            </div>
+            <div class="features-grid">
+                
+                <div class="card reveal">
+                    <i class="fas fa-shield-alt card-icon"></i>
+                    <h3 class="card-title">قطاعات حكومية متكاملة</h3>
+                    <p class="card-desc">أنظمة للشرطة، الإسعاف، والعدل مبنية بأعلى جودة لتقديم تجربة مشابهة للواقع بشكل كامل.</p>
+                </div>
+
+                <div class="card reveal">
+                    <i class="fas fa-coins card-icon"></i>
+                    <h3 class="card-title">اقتصاد واقعي وموزون</h3>
+                    <p class="card-desc">الاقتصاد مصمم بعناية ليضمن متعة مستمرة وعدل بين كافة اللاعبين، ابدأ ثروتك بذكاء.</p>
+                </div>
+
+                <div class="card reveal">
+                    <i class="fas fa-users card-icon"></i>
+                    <h3 class="card-title">أنظمة عصابات حصرية</h3>
+                    <p class="card-desc">مناطق السيطرة، حروب العصابات، طبخ، وتجارة في السوق السوداء بأنظمة متطورة.</p>
+                </div>
+
+                <div class="card reveal">
+                    <i class="fas fa-briefcase card-icon"></i>
+                    <h3 class="card-title">وظائف متنوعة</h3>
+                    <p class="card-desc">سواء كنت تريد توصيل الطلبات، الميكانيكا، أو افتتاح مشروعك الخاص، الخيارات لا تنتهي.</p>
+                </div>
+
+                <div class="card reveal">
+                    <i class="fas fa-car card-icon"></i>
+                    <h3 class="card-title">سيارات واقعية وتعديل</h3>
+                    <p class="card-desc">مئات السيارات الحقيقية المعدلة بفيزيائية قيادة فريدة، مع تخصيص غير محدود لكاراجك.</p>
+                </div>
+
+                <div class="card reveal">
+                    <i class="fas fa-bullhorn card-icon"></i>
+                    <h3 class="card-title">فعاليات دورية</h3>
+                    <p class="card-desc">مسابقات، سباقات، أحداث حية وتوزيع جوائز لتنشيط المجتمع وإبقاء المتعة مستمرة.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Streamers Section -->
+    <section id="streamers" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">صناع المحتوى</h2>
+                <p style="color: var(--text-muted); margin-top: 15px;">تابع أفضل البثوث المباشرة لأحداث مميزة في مختلف المجالات.</p>
+            </div>
+            <div class="features-grid" style="display: flex; justify-content: center;">
+                <a href="https://kick.com/entons" target="_blank" class="card reveal" style="text-align: center; display: block; width: 300px; cursor: pointer;">
+                    <div style="font-size: 40px; color: #53fc18; font-weight: 900; margin-bottom: 15px; font-family: 'Arial', sans-serif; letter-spacing: 2px;">KICK</div>
+                    <h3 class="card-title" style="margin-bottom: 0;">Entons</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Stats Section -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">منصات التواصل</h2>
+                <p style="color: var(--text-muted); margin-top: 15px;">مجتمع سيرفر إلكترو يمتلك حضورًا قويًا على منصات التواصل الاجتماعي، حيث يعد من الأكبر في العالم.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number">200k+</div>
+                    <div class="stat-label">مجموع الأعضاء</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number">170k+</div>
+                    <div class="stat-label">مجموع المتابعين</div>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number">60k+</div>
+                    <div class="stat-label">مجتمع تويتر</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="align-items: flex-start;">
+                
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">من نحن</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">إلكترو هو سيرفر فايف إم مخصص للاعبين العرب، تأسس بهدف تقديم تجربة لعب استثنائية.</p>
+                </div>
+                
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">القوانين</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">القوانين تهدف إلى ضمان المتعة والاحترام بين اللاعبين، مع تنظيم سير اللعبة بطريقة عادلة وشفافة.</p>
+                    <a href="rules.html" style="color: #fff; font-size: 0.9rem; text-decoration: underline;">الاطلاع على القوانين</a>
+                </div>
+
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">اتصل بنا</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">يمكنك التواصل معنا عن طريق جميع منصات التواصل الاجتماعي سواء الدسكورد او التويتر</p>
+                    <a href="https://discord.gg/NYe2D6g4wP" style="color: #fff; font-size: 0.9rem; text-decoration: underline;">الدخول إلى الديسكورد</a>
+                </div>
+
+            </div>
+            <div class="copyright">
+                حقوق الطبع والنشر &copy; 2026 Electro Server. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro | التقديم (Whitelist)</title>
+    <link rel="icon" href="Electro.png" type="image/png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Target for JS Script to detect Whitelist Page -->
+    <span id="whitelist-page-marker" style="display:none;"></span>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="nav-brand"><img src="Electro.png" alt="Electro"
+                    style="height: 45px; border-radius: 8px;"></a>
+
+            <ul class="nav-menu" style="display: flex; gap: 30px; align-items: center;">
+                <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li><a href="index.html#streamers" class="nav-link">صناع المحتوى</a></li>
+                <li><a href="rules.html" class="nav-link">القوانين</a></li>
+                <li><a href="whitelist.html" class="nav-link active">تقديم الوظائف</a></li>
+                <li><a href="store.html" class="nav-link">المتجر</a></li>
+            </ul>
+
+            <div class="user-area" id="user-area">
+                <a href="login.html" class="btn btn-outline" id="nav-login-btn"><i class="fab fa-discord"></i> تسجيل
+                    دخول</a>
+            </div>
+
+            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Page Header & Form -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="hero-title reveal" style="font-size: 3.5rem;">التقديم للسيرفر</h1>
+            <p class="hero-desc reveal" style="margin-bottom: 20px;">املأ البيانات بدقة للانضمام لمجتمعنا، مراجعة الطلب
+                قد تستغرق بعض الوقت.</p>
+
+            <!-- Not Logged In Message -->
+            <div id="not-logged-in-msg" style="display: none; padding: 40px;" class="form-container reveal">
+                <i class="fas fa-lock" style="font-size: 50px; color: #ff4757; margin-bottom: 20px;"></i>
+                <h3 style="margin-bottom: 15px;">يجب تسجيل الدخول أولاً!</h3>
+                <p style="color: var(--text-muted); margin-bottom: 30px;">لا يمكنك التقديم على الوايت لست بدون ربط حساب
+                    الديسكورد الخاص بك أولاً، يرجى تسجيل الدخول.</p>
+                <a href="login.html" class="btn btn-primary"><i class="fab fa-discord"></i> تسجيل الدخول</a>
+            </div>
+
+            <!-- Whitelist Form -->
+            <form id="whitelist-form" class="form-container reveal" style="text-align: right;">
+                <div class="form-group">
+                    <label class="form-label">حساب الديسكورد</label>
+                    <div style="position: relative;">
+                        <!-- Auto-filled by JS -->
+                        <input type="text" id="discord-id-field" class="form-control" disabled
+                            style="background-color: rgba(255,255,255,0.02); color: var(--text-muted);">
+                        <i class="fab fa-discord"
+                            style="position: absolute; left: 15px; top: 15px; color: var(--text-muted);"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">الاسم الكامل (أو النك نيم)</label>
+                    <input type="text" id="wl-name" class="form-control" placeholder="اسمك الحقيقي أو لقبك..." required
+                        minlength="2">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">العمر الحقيقي</label>
+                    <input type="number" id="wl-age" class="form-control" placeholder="يجب أن تكون 16 عاماً أو أكثر..."
+                        required min="10" max="99">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">خبرتك في الـ Roleplay</label>
+                    <select id="wl-experience" class="form-control" required style="cursor: pointer;">
+                        <option value="" disabled selected>اختر مستوى خبرتك...</option>
+                        <option value="beginner">مبتدئ (أول مرة)</option>
+                        <option value="intermediate">متوسط (لعبت في سيرفرات سابقة)</option>
+                        <option value="advanced">خبير (صاحب خبرة لسنوات)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">سبب انضمامك لسيرفر إلكترو؟</label>
+                    <textarea id="wl-reason" class="form-control" placeholder="لماذا اخترت سيرفر إلكترو تحديداً؟..."
+                        required minlength="20"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">قصة الشخصية (Story RP)</label>
+                    <textarea id="wl-story" class="form-control"
+                        placeholder="اكتب قصة الشخصية التي ستلعب بها داخل السيرفر بالتفصيل..." required
+                        minlength="50"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem;"><i
+                        class="fas fa-paper-plane"></i> إرسال الطلب</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="align-items: flex-start;">
+
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">من نحن</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">إلكترو هو سيرفر فايف إم مخصص للاعبين العرب،
+                        تأسس بهدف تقديم تجربة لعب استثنائية.</p>
+                </div>
+
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">القوانين</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">القوانين تهدف إلى ضمان المتعة والاحترام بين
+                        اللاعبين، مع تنظيم سير اللعبة بطريقة عادلة وشفافة.</p>
+                    <a href="rules.html" style="color: #fff; font-size: 0.9rem; text-decoration: underline;">الاطلاع على
+                        القوانين</a>
+                </div>
+
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">اتصل بنا</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">يمكنك التواصل معنا عن طريق جميع منصات
+                        التواصل الاجتماعي سواء الدسكورد او التويتر</p>
+                    <a href="https://discord.gg/NYe2D6g4wP"
+                        style="color: #fff; font-size: 0.9rem; text-decoration: underline;">الدخول إلى الديسكورد</a>
+                </div>
+
+            </div>
+            <div class="copyright">
+                حقوق الطبع والنشر &copy; 2026 Electro Server. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

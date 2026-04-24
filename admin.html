@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro | لوحة الإدارة</title>
+    <link rel="icon" href="Electro.png" type="image/png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-modal {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 10, 12, 0.95);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 9999;
+        }
+        .admin-modal-content {
+            background: var(--bg-card); padding: 40px; border-radius: 12px;
+            border: 1px solid var(--border-color); text-align: center; width: 400px;
+        }
+        .app-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; margin-bottom: 20px; text-align: right; }
+        .app-card h3 { color: var(--primary); margin-bottom: 15px; }
+        .app-card p { margin-bottom: 10px; color: var(--text-muted); }
+        .app-card strong { color: var(--text-main); }
+        .status-badge { padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; }
+        .status-pending { background: #f39c1233; color: #f39c12; }
+        .status-approved { background: #2ed57333; color: #2ed573; }
+        .status-rejected { background: #ff475733; color: #ff4757; }
+        .status-banned { background: #57657433; color: #a4b0be; }
+        .admin-buttons { display: flex; gap: 10px; margin-top: 15px; }
+        .btn-sm { padding: 8px 15px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <!-- Security Login Modal -->
+    <div id="admin-login-modal" class="admin-modal">
+        <div class="admin-modal-content">
+            <h2 style="margin-bottom: 20px; color: var(--primary);">تسجيل الدخول للإدارة</h2>
+            <input type="password" id="admin-pass-input" class="form-control" placeholder="كلمة المرور..." style="margin-bottom: 20px; text-align: center;">
+            <button id="admin-login-btn" class="btn btn-primary" style="width: 100%;">دخول</button>
+            <p id="admin-error-msg" style="color: #ff4757; margin-top: 15px; display: none;">كلمة المرور خاطئة!</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="nav-brand"><img src="Electro.png" alt="Electro" style="height: 45px; border-radius: 8px;"> <span style="font-size: 1.2rem; color: #ff4757;">Admin</span></a>
+            <ul class="nav-menu" style="display: flex; gap: 30px; align-items: center;">
+                <li><a href="index.html" class="nav-link">مغادرة لوحة الإدارة</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <section class="section" style="padding-top: 150px; min-height: 100vh;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">إدارة طلبات الوايت لست</h2>
+            </div>
+            
+            <div style="margin-bottom: 20px; text-align: center;">
+                <input type="text" id="search-input" class="form-control" placeholder="بحث باسم حساب الديسكورد..." style="width: 100%; max-width: 400px; display: inline-block;">
+            </div>
+
+            <div id="applications-container">
+                <div style="text-align: center; color: var(--text-muted);">
+                    <i class="fas fa-circle-notch fa-spin" style="font-size: 40px; color: var(--primary);"></i>
+                    <p style="margin-top: 15px;">جاري تحميل الطلبات...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script -->
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro | تسجيل الدخول</title>
+    <link rel="icon" href="Electro.png" type="image/png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="nav-brand"><img src="Electro.png" alt="Electro" style="height: 45px; border-radius: 8px;"></a>
+            
+            <ul class="nav-menu" style="display: flex; gap: 30px; align-items: center;">
+                <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li><a href="index.html#streamers" class="nav-link">صناع المحتوى</a></li>
+                <li><a href="rules.html" class="nav-link">القوانين</a></li>
+                <li><a href="whitelist.html" class="nav-link">تقديم الوظائف</a></li>
+                <li><a href="store.html" class="nav-link">المتجر</a></li>
+            </ul>
+
+            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Login Page Content -->
+    <section class="page-header" style="min-height: 100vh; display: flex; align-items: center;">
+        <div class="container" style="width: 100%;">
+            <div class="form-container login-card reveal">
+                <i class="fab fa-discord discord-icon"></i>
+                <h2 style="margin-bottom: 20px;">تسجيل الدخول للموقع</h2>
+                <p style="color: var(--text-muted); margin-bottom: 40px;">الرجاء تسجيل الدخول باستخدام حساب الديسكورد الخاص بك للتمكن من التقديم على الوايت لست (Whitelist).</p>
+                
+                <a href="/auth/discord" class="btn btn-discord" id="discord-login-btn" style="width: 100%; font-size: 1.2rem; padding: 15px; display: block; text-align: center; color: white;">
+                    <i class="fab fa-discord"></i> دخول عبر Discord
+                </a>
+                
+                <div style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 20px;">
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        بالدخول للموقع، أنت توافق على <a href="rules.html" style="color: var(--primary);">قوانين وشروط السيرفر</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="align-items: flex-start;">
+                
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">من نحن</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">إلكترو هو سيرفر فايف إم مخصص للاعبين العرب، تأسس بهدف تقديم تجربة لعب استثنائية.</p>
+                </div>
+                
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">القوانين</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">القوانين تهدف إلى ضمان المتعة والاحترام بين اللاعبين، مع تنظيم سير اللعبة بطريقة عادلة وشفافة.</p>
+                    <a href="rules.html" style="color: #fff; font-size: 0.9rem; text-decoration: underline;">الاطلاع على القوانين</a>
+                </div>
+
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">اتصل بنا</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">يمكنك التواصل معنا عن طريق جميع منصات التواصل الاجتماعي سواء الدسكورد او التويتر</p>
+                    <a href="https://discord.gg/NYe2D6g4wP" style="color: #fff; font-size: 0.9rem; text-decoration: underline;">الدخول إلى الديسكورد</a>
+                </div>
+
+            </div>
+            <div class="copyright">
+                حقوق الطبع والنشر &copy; 2026 Electro Server. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

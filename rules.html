@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro | قوانين السيرفر</title>
+    <link rel="icon" href="Electro.png" type="image/png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="nav-brand"><img src="Electro.png" alt="Electro"
+                    style="height: 45px; border-radius: 8px;"></a>
+
+            <ul class="nav-menu" style="display: flex; gap: 30px; align-items: center;">
+                <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li><a href="index.html#streamers" class="nav-link">صناع المحتوى</a></li>
+                <li><a href="rules.html" class="nav-link active">القوانين</a></li>
+                <li><a href="whitelist.html" class="nav-link">تقديم الوظائف</a></li>
+                <li><a href="store.html" class="nav-link">المتجر</a></li>
+            </ul>
+
+            <div class="user-area" id="user-area">
+                <a href="login.html" class="btn btn-outline" id="nav-login-btn"><i class="fab fa-discord"></i> تسجيل
+                    دخول</a>
+            </div>
+
+            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="page-header pb-0">
+        <div class="container">
+            <h1 class="hero-title reveal" style="font-size: 3.5rem;">قوانين السيرفر</h1>
+            <p class="hero-desc reveal">الالتزام بالقوانين يضمن بيئة لعب نظيفة وممتعة للجميع. مخالفة القوانين قد تعرضك
+                للعقوبة.</p>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section class="section pt-50">
+        <div class="container">
+            <div class="rules-container">
+                <!-- Search Bar -->
+                <div class="rules-search-wrapper reveal">
+                    <input type="text" id="rulesSearch" class="rules-search-input" placeholder="ابحث عن قانون معين... (مثلاً: NLR, RDM, الشرطة)">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+
+                <div class="rules-list" id="rulesList">
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-redo-alt" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> قوانين الحياة الجديدة - NLR</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <p>في حال إغمائك بشكل كامل لا يمكنك الكلام أو الحركة أو فعل أي شيء.</p>
+                            <ul>
+                                <li><strong>عند الإغماء:</strong> في حال تم إسقاطك من قبل شخص وتم إنعاشك من قبل مسعفين، تستطيع تذكر جميع الأحداث.</li>
+                                <li><strong>إبرة النسيان:</strong> في حال تم إعطاؤك إبرة <span class="highlight">"في العيادة الخاصة"</span> من أحد اللاعبين الذين لديهم عداوة معك، لا تستطيع تذكر أي شيء حصل لك (بما في ذلك العداوات أو الأحداث).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-bolt" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> الباور جيمنج - PowerGaming</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <p>استخدام الوسائل غير الموجودة في اللعبة للحصول على ميزة أو عدم التوافق مع العالم بطريقة معقولة وبشكل واقعي.</p>
+                            <div class="separator"></div>
+                            <p><strong>تنبيه:</strong> هناك الكثير من المواقف والأمثلة التي تندرج تحت <span class="highlight">Powergaming</span>، ويجب الالتزام بالواقعية التامة في كل تصرف.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-heartbeat" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> الخوف على الحياة - NVL</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <p>عدم الخوف بشكل واقعي على حياتك عندما تتعرض للتهديد بالأسلحة أو بأذى شديد يعتبر مخالفة.</p>
+                            <ul>
+                                <li><strong>مبدأ أساسي:</strong> الخوف على الحياة شي أساسي ومهم جداً.</li>
+                                <li><strong>مثال:</strong> إذا كان هناك أداة أو سلاح يهدد حياتك، يجب عليك الخضوع والتعاون بشكل يضمن سلامتك.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-brain" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> الميتا جيمنج - Metagaming</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <p>أي معلومة تحصل عليها من <span class="highlight">خارج المدينة</span> تعتبر مخالفة جسيمة.</p>
+                            <ul>
+                                <li><strong>أمثلة الميتا:</strong> معلومات من بث مباشر، ديسكورد، أو مقاطع يوتيوب.</li>
+                                <li><strong>النتيجة:</strong> استخدام هذه المعلومات داخل الرول بلاي يعرضك للعقوبة.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-skull-crossbones" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> القتل العشوائي - RDM</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <p>قتل لاعب آخر بدون سبب مقنع أو بدون تفاعل مسبق يؤدي إلى القتل.</p>
+                            <div class="separator"></div>
+                            <p><strong>ملاحظة:</strong> يجب أن يكون هناك سبب كافي وواضح قبل الشروع في القتل.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-user-shield" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> قانون تقدير الحياة - NWL</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <p>هي الحفاظ على حياتك وحياة الآخرين، وعدم التهور، وأن لا تستهين بقتل الأشخاص، وأن لا تقاوم المجرم أو الشرطة او اي شخص يحمل سلاح مهما كان خصوصاُ اذا كنت أعزل.</p>
+                            <p>وهذا لا يمنع استعمال حق الدفاع عن النفس عند الضرورة التي تمنعك من طلب مساعدة الشرطة، وبكل الأحوال يجب محاورة اللاعب بشكل جيد والتفاوض معه قبل الشروع بأي عمل يعرض حياة اللاعب الآخر للخطر.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-gavel" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> القوانين العامة</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <span class="rule-subtitle">📌 شروط عامة</span>
+                            <ul>
+                                <li>العمر المسموح لدخول السيرفر: <span class="highlight">18 سنة فما فوق</span>.</li>
+                                <li>ممنوع استخدام أي شخصية افتراضية إلا من خلال المتجر فقط.</li>
+                                <li><strong>تنسيق الاسم:</strong> ممنوع كتابة أسمك باللغة الإنجليزية أو برموز أو تشكيل أو يكون اسم شخصيه مشهوره.</li>
+                                <li>يمنع الدخول من أجهزة غير جهازك الشخصي (مثل مقاهي الإنترنت أو مراكز الألعاب).</li>
+                                <li>يحق لك امتلاك شخصية واحدة فقط.</li>
+                            </ul>
+
+                            <span class="rule-subtitle">🔄 تغيير الشخصية (من إجرامية إلى عسكرية)</span>
+                            <ul>
+                                <li>يجب أن يمر 14 أيام بدون أي نشاط إجرامي.</li>
+                                <li>يتم الاحتفاظ بالسجل الجنائي وتقديم طلب عدم ممانعة للتطوع الاجباري من المحكمة وتقوم بالتطوع في مستشفى إلكترو.</li>
+                                <li>إذا كانت القضايا كبيرة وتؤدي إلى حكم بالإعدام، يتم إعدام الشخصية.</li>
+                                <li>لا يمكن دخول العسكرية إلا بعد مرور 20 يوم من التوقف عن الإجرام.</li>
+                                <li>إذا كان العكس (من عسكري إلى مدني/مجرم) يجب تقديم استقالة رسمية.</li>
+                            </ul>
+
+                            <div class="separator"></div>
+
+                            <span class="rule-subtitle">🎥 اللعب والبث</span>
+                            <ul>
+                                <li>يمنع استخدام برامج تعديل الصوت (Voice Changers).</li>
+                                <li>يمنع استخدام برامج الغش أو الثغرات (Exploits).</li>
+                                <li>يمنع تسجيل الأصوات في برامج التواصل (Discord, Teamspeak) أثناء التواجد في السيرفر.</li>
+                                <li>ممنوع <span class="highlight">الستريم سنايب</span> أو متابعة البثوث أثناء اللعب.</li>
+                            </ul>
+
+                            <div class="separator"></div>
+
+                            <span class="rule-subtitle">🧑🏾‍💼 القوانين العامة داخل المدينة</span>
+                            <ul>
+                                <li>يمنع السب أو القذف أو الإساءة للأديان أو الرموز الوطنية.</li>
+                                <li>يمنع التحرش بجميع أشكاله.</li>
+                                <li>يمنع العنصرية أو التنمر.</li>
+                                <li>ممنوع الاعتداء على البوتات (يُعاملون كمواطنين).</li>
+                                <li>ممنوع طلب تعويض مالي عند الخسارة بسبب التحلل أو المستشفى.</li>
+                                <li>تطبيق تويتر مخصص للرول بلاي وتقمص الشخصيات فقط.</li>
+                                <li>يمنع استغلال خدمات الجوال (تاكسي/إسعاف) للخطف أو القتل.</li>
+                                <li>يمنع توزيع مبالغ مالية كبيرة (10 آلاف+) بدون معرفة سابقة لأسبوع.</li>
+                                <li>يمنع مشاركة الحسابات الشخصية (سناب/إنستا/ديسكورد) نهائياً.</li>
+                            </ul>
+
+                            <div class="separator"></div>
+
+                            <span class="rule-subtitle">🚗 قوانين القيادة</span>
+                            <ul>
+                                <li>يجب أن تكون القيادة واقعية (لا سرعة مفرطة بدون سبب، لا قطع إشارات عشوائي).</li>
+                                <li>يمنع استخدام السيارات الرياضية (Super/Sports) في الطرق الوعرة.</li>
+                                <li>يجب الالتزام بمسارات الطريق وعدم القيادة عكس السير بشكل متعمد ومتهور.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-exclamation-triangle" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> نظام الوورنات</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <p><strong>للتنبيه:</strong> الوورنات ليست العقوبة الوحيدة للمخالفين. يوجد بعض المخالفات مستثناة من الوورنات وتستوجب عقوبات أخرى.</p>
+                            <ul>
+                                <li><strong>1 وارن:</strong> بدون اي اجراء.</li>
+                                <li><strong>2 وارن:</strong> باند 12 ساعة.</li>
+                                <li><strong>3 وارن:</strong> باند 3 أيام.</li>
+                                <li><strong>4 وارن:</strong> باند 10 أيام.</li>
+                                <li><strong>5 وارن:</strong> باند نهائي.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-shield-alt" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> قوانين الشرطة</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <span class="rule-subtitle">⚖️ الإجراءات القضائية والمداهمات</span>
+                            <ul>
+                                <li><strong>إيقاف الخدمات:</strong> لا يمكن تنفيذ إيقاف الخدمات إلا من خلال حكم من المحكمة بطلب من الضابط وما فوق.</li>
+                                <li><strong>المداهمة:</strong> يتم طلب المداهمة من خلال الضباط وما فوق ولا تنفذ إلا بأمر قضائي.</li>
+                            </ul>
+
+                            <span class="rule-subtitle">🔫 استخدام القوة والأسلحة</span>
+                            <ul>
+                                <li>يجب استخدام السلاح فقط في حال أخرجه المجرم أولاً.</li>
+                                <li>يجب استخدام نفس فئة السلاح (خفيف للخفيف، ثقيل للثقيل) إلا بأوامر القيادة.</li>
+                                <li>يمنع استخدام الأسلحة النارية ضد السلاح الأبيض إلا في حالة الدفاع عن النفس من هجوم مباشر.</li>
+                                <li>لن يستخدم رجل الأمن القوة غير الضرورية أو المفرطة. سيتم استخدام الحد الأدنى من القوة اللازمة.</li>
+                            </ul>
+
+                            <span class="rule-subtitle">👮 أخلاقيات رجل الأمن</span>
+                            <ul>
+                                <li>يجب أن يكون رجل الأمن مهذباً، لبقاً، ومتحكماً في أعصابه في جميع الأوقات.</li>
+                                <li>يمنع منعاً باتاً أي عمل من أعمال الفساد أو استغلال المنصب.</li>
+                                <li>احترام حقوق الإنسان وكرامة المحتجزين وتوفير العناية الطبية اللازمة.</li>
+                                <li>يحظر إعارة بطاقة الهوية الرسمية أو الشارة لأي شخص آخر.</li>
+                            </ul>
+
+                            <div class="separator"></div>
+
+                            <span class="rule-subtitle">🚫 التمرد والخيانة</span>
+                            <ul>
+                                <li>اللغة المسيئة تجاه الضباط أو القيادة تعتبر خيانة عظمى.</li>
+                                <li>الرفض المتعمد للامتثال للأوامر القانونية يترتب عليه عقوبات صارمة.</li>
+                                <li>السخرية من أوامر القيادة أو إفشاء الأسرار العسكرية.</li>
+                            </ul>
+                            <p><strong>العقوبة:</strong> قد تصل إلى إنهاء الخدمة أو الإعدام (رول بلاي).</p>
+
+                            <span class="rule-subtitle">👔 المظهر والواجب</span>
+                            <ul>
+                                <li>يجب الحفاظ على مظهر أنيق والالتزام بالزي الرسمي المحدد لكل رتبة.</li>
+                                <li>يجب أن يكون رجل الأمن مجهزاً بالعتاد الكامل قبل مغادرة المركز.</li>
+                                <li>يمنع الغياب عن العمل لأكثر من يومين بدون إذن مسبق.</li>
+                            </ul>
+
+                            <div class="separator"></div>
+
+                            <span class="rule-subtitle">📢 حقوق المواطن عند القبض</span>
+                            <p class="highlight">"تم القبض عليك من قبل شرطة إلكترو، يجب عليك التزام الصمت. أي شيء ستقوله يمكن أن يُستخدم ضدك. لديك الحق في طلب محامٍ إذا كان متوفراً."</p>
+
+                            <p><strong>ملاحظة:</strong> هذه القوانين قابلة للتعديل من قبل إدارة شرطة إلكترو في أي وقت.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-ambulance" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> قوانين الإسعاف</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <ul>
+                                <li>يمنع على المسعفين منعاً باتاً بناء عداوات مع المواطنين.</li>
+                                <li>يمنع على المسعفين منعاً باتاً القيام بأي نشاط إجرامي.</li>
+                                <li>يمنع على المسعفين منعاً باتاً حيازة أي نوع من الأسلحة (البيضاء أو النارية).</li>
+                                <li>يمنع التقديم للإسعاف بالشخصية الإجرامية.</li>
+                                <li>يمنع على المسعفين العمل في أي أعمال أخرى.</li>
+                                <li>يمنع على المسعفين منعاً باتاً تسريب أي معلومات تخص أي قطاع حكومي لأي شخص.</li>
+                                <li>يمنع على المسعفين التوجه إلى حالات إطلاق نار بدون إبلاغ الشرطة.</li>
+                                <li>يمنع على المسعفين نقل شخص في سيارة الإسعاف أو استخدام سيارة الإسعاف بشكل شخصي أو لتوصيل المواطنين.</li>
+                                <li>يمنع على المسعفين علاج الحالات الجنائية بدون إذن من العساكر.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-users" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> قوانين العصابات</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <ul>
+                                <li>ممنوع نهائياً أي اتحاد أو تحالف بين العصابات في أي فايت أو أي عداوة بين طرفين أو ضد الشرطة.</li>
+                                <li>لا يمكن بدء عداوة عصابات إلا بموافقة بوسات العصابتين أو نوابهم داخل الرول، عدا ذلك تبقى العداوة شخصية أو فردية ويجب أن تكون العداوة مصورة بشكل كامل من البداية للنهاية.</li>
+                                <li>في حال وجود أي فايت داخل لوس سانتوس يمكن للشرطة التدخل في الفايت والقاء القبض على المجرمين او المشاركين في حالة اطلاق النار (ما عدا فايتات المقرات).</li>
+                                <li>عدد العصابة يجب ان لا يقل العدد عن 10 لاعب ولا يزيد عن 25 لاعب.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-balance-scale" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> قوانين العدل</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <p>وزارة العدل في إلكترو هي الجهة العليا المسؤولة عن النظام القضائي والدستوري في الدولة، وتولي أهمية كبرى لسير العدالة وتطبيق القوانين بما يضمن حماية حقوق كل مواطن على أراضي دولة إلكترو.</p>
+                            <ul>
+                                <li><strong>١-</strong> الرتب الخاصة لوزارة العدل هي: قاضي - مدعي عام - محامي.</li>
+                                <li><strong>٢-</strong> يجب على المواطن تقدير مكانة الموظف المنتسب للوزارة العدل بمن فيهم المحامين.</li>
+                                <li><strong>٣- رخصة للمحامين:</strong> رخصة المحامين هي وثيقة قانونية تصدرها الجهات المختصة تتيح للمحامي ممارسة مهنة المحاماة وتمثيل الأفراد أو الجهات أمام المحاكم والهيئات القانونية.</li>
+                                <li><strong>٤- توكيل محامي:</strong>
+                                    <ul>
+                                        <li>للمواطن يحق له توكيل محامي خاص مقيد للأمور تجارية أو أمور خاصة أخرى.</li>
+                                        <li>للمواطن يحق له توكيل محامي لقضية قائمة له أو عليه.</li>
+                                        <li>للمواطن أن يكون لديه محامي مع إثبات ملكية التوكيل من مكتب المحامين قبل طلبه للمحامي في زنزانات المركز، ويحق للعسكري رفض طلب المحامي إن لم يوجد أي إثبات ورقي موقع من مكتب المحامين.</li>
+                                        <li>يوجد وقت محدد للتحدث مع المحامي داخل غرفة التحقيق، يتم تحديده من مسؤول التحقيق ولا يحق للعسكري التنصت أو سماع الحديث من غرفة العزل.</li>
+                                        <li>لا يحق للمحامي رفض سجن الموكل من قبل الشرطة. وكما يحق للمحامي زيارة الموكل السجين في السجن المركزي بإستخدام غرفة الزيارات والاستقبال.</li>
+                                        <li>لا يحق للمواطن طلب محامي إذا كانت القضية تمت بالجرم المشهود حتى لو كان بين المحامي والمواطن توكيل ساري المفعول.</li>
+                                        <li>للمواطن الذي تعرض للظلم في جناية أو جنحة, يمكنه استكمال الإجراءات العسكرية أثناء وجوده في الزنزانة, وبعد انقضاء مدة محكوميته بالسجن، يتوجه إلى المحكمة ويقوم برفع دعوى وتوكيل محامٍ لاستكمال القضية.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>٥-</strong> القاضي والمدعي العام هم الشخصيّات الاعتبارية للوزارة العدل ويعتبران ممثلان للوزارة وقوانينها. وللقاضي حصانة قانونية تمنع محاسبته أو محاكمته عن الجرائم أثناء ممارسته لمهامه القضائية إلا وفق إجراءات خاصة.</li>
+                                <li><strong>٦-</strong> خطف القاضي والمدعي العام يعد مساءلة قانونية ويحق للقاضي والمدعي العام طلب جلسة محكمة عاجلة ضد المتسبب وعقوبتها تصل إلى إعدام وسجن المؤبد أو السجن الانفرادي.</li>
+                                <li><strong>٧-</strong> يحق خطف المحامي للتفاوض في السرقات وكما يحق للمحامي طلب جلسة قضائية ضدهم ومحاكمتهم بضعف عقوبة العسكرية.</li>
+                                <li><strong>٨- حضور جلسات المحكمة:</strong>
+                                    <ul>
+                                        <li>ممنوع دخول قاعة المحكمة إذا كانت جلسة المحكمة مغلقة.</li>
+                                        <li>ممنوع دخول قاعة المحكمة بسلاح ناري أو أبيض، ومن يخالف ذلك يتمّ محاكمته بقضية جرائم جلسات المحكمة.</li>
+                                        <li>يسمح دخول المواطنين بالزي الرسمي فقط ومن يخالف ذلك يحقّ للمحكمة مخالفته بالذوق العام.</li>
+                                        <li>الالتزام بالهدوء والصمت داخل قاعة المحكمة كما لا يسمح بالتدخل في الجلسة إلا بطلب مسبق.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>٩- الطلبات العسكرية:</strong> يحق لضباط المركز طلب أمر مداهمة و تفتيش ممتلكات خاصة للمواطن من المحكمة إذا كانت التهمة: خطف عسكري أو سرقة عتاد عسكري، زعزعة أمن قومي، تجارة أسلحة، تجارة ممنوعات، أو إساءة وتشهير.</li>
+                                <li><strong>١٠- الطلبات التجارية والمدنية:</strong>
+                                    <ul>
+                                        <li>السجل التجاري: لكل من يملك تجارة في المدينة يجب عليه استخراج سجل تجاري تجنباً للمحاسبة.</li>
+                                        <li>التوكيل الخاص: يجب على التاجر توكيل محامي للأمور الإدارية والقانونية.</li>
+                                        <li>فرض الضريبة التجارية لدعم الاقتصاد وتمويل الخدمات العامة.</li>
+                                        <li>يحق للمواطن طلب شهادة عدم ممانعة وحذف سجل جنائي بعد ثلاثين يوماً من آخر قضية مسجلة.</li>
+                                        <li>لا يحق للمواطن طلب حذف سجل جنائي إذا كانت القضايا المسجلة: سرقة بنوك، زعزعة أمن قومي، أو تحريض.</li>
+                                        <li>يحق للمواطن طلب شهادة حسن سيرة وسلوك تُثبت تمتعه بسجل قانوني نظيف.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>١١- رخصة المحاماة (التوظيف):</strong> يجب أن يكون المتقدم 18 سنة فما فوق، متقن للرول بلاي، محمود السيرة، بجودة صوت ممتازة، ومغير لملامح الوجه. التقديم إلكتروني عبر موقع إلكترو.</li>
+                                <li><strong>١٢- شهادة عدم ممانعة (تطوع إجباري):</strong> للراغبين في حذف سجلاتهم للانضمام للجهات الحكومية. يتم التقديم بعد 14 يوم من آخر قضية. يتم التطوع في مستشفى إلكترو لمدة 40 ساعة. وتُمنح هذه الفرصة مرة واحدة فقط خلال حياة الشخصية.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rule-item reveal">
+                    <div class="rule-header">
+                        <h3 class="rule-title"><i class="fas fa-mask" style="margin-left: 10px; font-size: 0.9em; opacity: 0.8;"></i> قوانين الإجرام</h3>
+                        <i class="fas fa-chevron-down rule-toggle-icon"></i>
+                    </div>
+                    <div class="rule-content">
+                        <div class="rule-inner">
+                            <ul>
+                                <li>ممنوع ملاحقة العساكر بغرض المضايقات أو التدخل في عملهم أو الترصد لهم وبناء عداوة معهم.</li>
+                                <li>يمنع منعاً باتاً التحلل أو الخروج من المدينة إلا بعد مرور 15 دقيقة من انتهاء السيناريو.</li>
+                                <li><strong>العداوة:</strong> يمنع تكوين عداوة لأسباب تافهة مثل: مشادة كلامية وضرب بالأيدي، حادث بسيط بالسيارة، أو خطف بدون سبب منطقي. يجب رفع بلاغ للشرطة واستكمال الرول بلاي في هذه الحالات.</li>
+                                <li>ممنوع الدخول في أي سيناريو إلا إذا كانت بينكم معرفة رول بلاي لمدة لا تقل عن أسبوع.</li>
+                                <li>يمنع طلب الخدمات المتاحة بالجوال (مثل التاكسي أو الإسعاف) بقصد الخطف أو القتل أو السرقة.</li>
+                                <li>في حال رفع شخص عليك سلاحاً (ناري أو أبيض) يجب عليك الاستسلام الكامل ومجاراة السيناريو حتى النهاية.</li>
+                                <li>يمنع خطف أي شخص في مكان عام أو مزدحم؛ يجب سحب الهدف إلى مكان خالٍ أولاً.</li>
+                                <li>يمنع خطف أو أخذ رهينة من بين معارفك (سواء كانوا أصدقاء أو من نفس العصابة). يجب أن تكون الرهينة شخصاً غريباً عنك.</li>
+                                <li>ممنوع منعاً باتاً قتل الأشخاص في حال كانوا ينفذون الأوامر.</li>
+                                <li>يسمح بالسرقة والترصد في الأماكن المشبوهة (بعد تهديد الأشخاص) مثل: مناطق بيع الكوكايين، الجزيرة، أماكن بيع القروش. يمنع الترصد في العيادات الخاصة.</li>
+                                <li>إذا أسقطت عسكري أو مجرم في سيناريو يمنع نقله للمستشفى بعد انتهاء الفايت إلا إذا كان الشخص من عصابتك أو مجموعتك.</li>
+                                <li>عند تبادل إطلاق النار بين طرفين يمنع حمل شخص بيدك أثناء الاشتباك، يجب إنزاله أولاً ثم يمكنك المشاركة.</li>
+                                <li>ممنوع إعطاء أي معلومات إجرامية أو تفاصيل حساسة عن نشاطات العصابة للغرباء إلا بعد معرفة تتجاوز أسبوع كامل.</li>
+                                <li><strong>يحق للمواطن سرقة العسكري في الحالات التالية:</strong> إذا كانت هناك عداوة سابقة (بشرط ألا تكون بسبب قيام العسكري بمهامه)، أو إذا تمت مداهمة حارة عصابة من قبل الشرطة، يحق للعصابة سرقة العساكر داخل الحارة.</li>
+                                <li><strong>السرقة:</strong> يحق لك سرقة مواطن فقط إذا كانت هناك عداوة واضحة. يمنع السرقة العشوائية.</li>
+                                <li><strong>النسيان وإنهاء العداوة:</strong> يُمنع منعًا باتًا العودة إلى الحالة بعد إسقاطك، ويشمل ذلك جميع الحالات دون استثناء، بما فيها الحالات المفتوحة.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                </div> <!-- End rules-list -->
+            </div> <!-- End rules-container -->
+
+            <div class="text-center reveal" style="margin-top: 50px; text-align: center;">
+                <p style="color: var(--text-muted); font-size: 1.1rem;">لقراءة القوانين الكاملة والمفصلة، يرجى مراجعة
+                    روم <span style="color: var(--primary);">#rules</span> في الديسكورد.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="align-items: flex-start;">
+
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">من نحن</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">إلكترو هو سيرفر فايف إم مخصص للاعبين العرب،
+                        تأسس بهدف تقديم تجربة لعب استثنائية.</p>
+                </div>
+
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">القوانين</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">القوانين تهدف إلى ضمان المتعة والاحترام بين
+                        اللاعبين، مع تنظيم سير اللعبة بطريقة عادلة وشفافة.</p>
+                    <a href="rules.html" style="color: #fff; font-size: 0.9rem; text-decoration: underline;">الاطلاع على
+                        القوانين</a>
+                </div>
+
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">اتصل بنا</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">يمكنك التواصل معنا عن طريق جميع منصات
+                        التواصل الاجتماعي سواء الدسكورد او التويتر</p>
+                    <a href="https://discord.gg/NYe2D6g4wP"
+                        style="color: #fff; font-size: 0.9rem; text-decoration: underline;">الدخول إلى الديسكورد</a>
+                </div>
+
+            </div>
+            <div class="copyright">
+                حقوق الطبع والنشر &copy; 2026 Electro Server. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
