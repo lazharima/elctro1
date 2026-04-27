@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
@@ -52,26 +52,27 @@
             <p class="hero-desc reveal" style="margin-bottom: 20px;">املأ البيانات بدقة للانضمام لمجتمعنا، مراجعة الطلب
                 قد تستغرق بعض الوقت.</p>
 
-            <!-- Not Logged In Message -->
-            <div id="not-logged-in-msg" style="display: none; padding: 40px;" class="form-container reveal">
-                <i class="fas fa-lock" style="font-size: 50px; color: #ff4757; margin-bottom: 20px;"></i>
-                <h3 style="margin-bottom: 15px;">يجب تسجيل الدخول أولاً!</h3>
-                <p style="color: var(--text-muted); margin-bottom: 30px;">لا يمكنك التقديم على الوايت لست بدون ربط حساب
-                    الديسكورد الخاص بك أولاً، يرجى تسجيل الدخول.</p>
-                <a href="login.html" class="btn btn-primary"><i class="fab fa-discord"></i> تسجيل الدخول</a>
-            </div>
+
 
             <!-- Whitelist Form -->
             <form id="whitelist-form" class="form-container reveal" style="text-align: right;">
                 <div class="form-group">
-                    <label class="form-label">حساب الديسكورد</label>
+                    <label class="form-label">اسم حساب الديسكورد (Username)</label>
                     <div style="position: relative;">
-                        <!-- Auto-filled by JS -->
-                        <input type="text" id="discord-id-field" class="form-control" disabled
-                            style="background-color: rgba(255,255,255,0.02); color: var(--text-muted);">
+                        <input type="text" id="discord-username-field" class="form-control" placeholder="مثال: ahmed123" required minlength="2">
                         <i class="fab fa-discord"
                             style="position: absolute; left: 15px; top: 15px; color: var(--text-muted);"></i>
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">آيدي الديسكورد (Discord ID)</label>
+                    <div style="position: relative;">
+                        <input type="text" id="discord-id-field" class="form-control" placeholder="مثال: 123456789012345678" required pattern="[0-9]{17,20}">
+                        <i class="fas fa-hashtag"
+                            style="position: absolute; left: 15px; top: 15px; color: var(--text-muted);"></i>
+                    </div>
+                    <small style="color: var(--text-muted); font-size: 0.8rem;">يمكنك الحصول عليه من إعدادات الديسكورد > متقدم > تفعيل وضع المطور > ثم اضغط على اسمك واختر نسخ الآيدي</small>
                 </div>
 
                 <div class="form-group">

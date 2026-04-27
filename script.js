@@ -122,12 +122,12 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // Update Whitelist Page if present
+        // Update Whitelist Page if present - auto-fill discord fields
         if (document.getElementById('whitelist-page-marker')) {
-            if (whitelistForm) whitelistForm.style.display = 'grid';
-            if (notLoggedInMsg) notLoggedInMsg.style.display = 'none';
-            const discordField = document.getElementById('discord-id-field');
-            if (discordField) discordField.value = `${user.username} (${user.id})`;
+            const discordUsernameField = document.getElementById('discord-username-field');
+            const discordIdField = document.getElementById('discord-id-field');
+            if (discordUsernameField) discordUsernameField.value = user.username;
+            if (discordIdField) discordIdField.value = user.id;
         }
     }
 
@@ -135,11 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navLoginBtn) navLoginBtn.style.display = 'inline-block';
         if (userArea) userArea.innerHTML = '';
 
-        // Update Whitelist Page if present
-        if (document.getElementById('whitelist-page-marker')) {
-            if (whitelistForm) whitelistForm.style.display = 'none';
-            if (notLoggedInMsg) notLoggedInMsg.style.display = 'block';
-        }
+
     }
 
     checkAuth();
@@ -163,8 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
             btn.disabled = true;
 
-            const discordId = currentUser ? currentUser.id : 'unknown';
-            const discordUsername = currentUser ? currentUser.username : 'unknown';
+            const discordId = document.getElementById('discord-id-field')?.value || 'unknown';
+            const discordUsername = document.getElementById('discord-username-field')?.value || 'unknown';
             const name = document.getElementById('wl-name')?.value || '';
             const age = document.getElementById('wl-age')?.value || '';
             const experience = document.getElementById('wl-experience')?.value || '';
