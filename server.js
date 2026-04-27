@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2/promise');
 const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, 'bot', '.env') });
 const session = require('express-session');
 const axios = require('axios');
 const helmet = require('helmet');
@@ -145,6 +144,40 @@ app.get('/auth/logout', (req, res) => {
     res.redirect('/');
 });
 
+// --- Admin Authentication ---
+
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'electro2006';
+
+// Admin Login
+app.post('/api/admin/login', (req, res) => {
+    const { password } = req.body;
+    if (password === ADMIN_PASSWORD) {
+        req.session.isAdmin = true;
+        res.json({ success: true });
+    } else {
+        res.status(401).json({ error: 'كلمة المرور خاطئة' });
+    }
+});
+
+// Admin Session Check
+app.get('/api/admin/check', (req, res) => {
+    res.json({ isAdmin: !!req.session.isAdmin });
+});
+
+// Admin Logout
+app.get('/api/admin/logout', (req, res) => {
+    req.session.isAdmin = false;
+    res.json({ success: true });
+});
+
+// Admin Auth Middleware
+function requireAdmin(req, res, next) {
+    if (req.session && req.session.isAdmin) {
+        return next();
+    }
+    return res.status(403).json({ error: 'غير مصرح بالوصول. يرجى تسجيل الدخول كمسؤول.' });
+}
+
 // --- API Routes ---
 
 const apiLimiter = rateLimit({
@@ -187,7 +220,7 @@ app.post('/api/submit-application', apiLimiter, async (req, res) => {
 });
 
 // 2. Get All Applications (For Admin Dashboard)
-app.get('/api/applications', async (req, res) => {
+app.get('/api/applications', requireAdmin, async (req, res) => {
     try {
         const [rows] = await pool.query(`SELECT * FROM applications ORDER BY created_at DESC`);
         res.status(200).json(rows);
@@ -198,7 +231,7 @@ app.get('/api/applications', async (req, res) => {
 });
 
 // 3. Update Application Status (Approve/Reject/Ban)
-app.post('/api/applications/:id/status', async (req, res) => {
+app.post('/api/applications/:id/status', requireAdmin, async (req, res) => {
     const id = req.params.id;
     const { status } = req.body; // 'approved', 'rejected', 'banned'
     

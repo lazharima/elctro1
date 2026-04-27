@@ -9,16 +9,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let allApplications = [];
 
-    // Simple Authentication
-    loginBtn.addEventListener('click', () => {
+    // Server-side Authentication
+    loginBtn.addEventListener('click', async () => {
         const pass = passInput.value;
-        if (pass === 'electro2006') { // Hardcoded password as per plan
-            loginModal.style.display = 'none';
-            loadApplications();
-        } else {
+        loginBtn.disabled = true;
+        loginBtn.textContent = 'جاري التحقق...';
+        errorMsg.style.display = 'none';
+
+        try {
+            const res = await fetch('/api/admin/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password: pass })
+            });
+
+            if (res.ok) {
+                loginModal.style.display = 'none';
+                loadApplications();
+            } else {
+                errorMsg.style.display = 'block';
+            }
+        } catch (err) {
+            errorMsg.textContent = 'فشل الاتصال بالخادم.';
             errorMsg.style.display = 'block';
         }
+
+        loginBtn.disabled = false;
+        loginBtn.textContent = 'دخول';
     });
+
+    // Auto-check if already logged in as admin
+    (async () => {
+        try {
+            const res = await fetch('/api/admin/check');
+            const data = await res.json();
+            if (data.isAdmin) {
+                loginModal.style.display = 'none';
+                loadApplications();
+            }
+        } catch (e) {}
+    })();
 
     passInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') loginBtn.click();
@@ -110,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             alert('حدث خطأ أثناء تحديث الحالة.');
                         }
                     } catch (err) {
-                        alert('فعل الاتصال بالخادم.');
+                        alert('فشل الاتصال بالخادم.');
                     }
                 }
             });
